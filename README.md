@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Cryptocurrency-Market-Tracker-React-WebApp-Using-CoinGeck-Api
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
