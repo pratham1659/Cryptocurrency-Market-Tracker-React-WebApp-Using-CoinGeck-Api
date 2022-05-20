@@ -1,10 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import { Header } from "./components";
-import HomePage from "./pages/HomePage";
-import CoinPage from "./pages/CoinPage";
+import { HomePage, CryptoDetails, Cryptocurrencies, CoinPage, Exchanges, News } from "./pages";
 import { makeStyles } from "@material-ui/core/styles";
-import { Layout, Typography, Space } from 'antd';
 
 
 function App() {
@@ -23,7 +21,11 @@ function App() {
       <div className={classes.App}>
         <Header />
         <Route path="/" component={HomePage} exact />
+        <Route exact path="/crypto/:coinId" component={CryptoDetails} />
+        <Route path="/Cryptocurrencies" component={Cryptocurrencies} exact />
         <Route path="/coins/:id" component={CoinPage} exact />
+        <Route exact path="/exchanges" component={Exchanges} />
+        <Route path="/news" component={News} />
       </div>
     </BrowserRouter>
   );

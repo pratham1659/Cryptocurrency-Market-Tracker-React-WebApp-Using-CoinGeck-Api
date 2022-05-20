@@ -1,16 +1,7 @@
 import React from "react";
-import { Footer } from "../components";
-import Banner from "../components/Banner/Banner";
-import CoinsTable from "../components/CoinsTable";
 
 const HomePage = () => {
-  return (
-    <>
-      <Banner />
-      <CoinsTable />
-      <Footer />
-    </>
-  );
+  return <div>HomePage</div>;
 };
 
 export default HomePage;

@@ -25,28 +25,6 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
-  //NewMenuItems
-  const [activeMenu, setActiveMenu] = useState(true);
-  const [screenSize, setScreenSize] = useState(undefined);
-
-  useEffect(() => {
-    const handleResize = () => setScreenSize(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (screenSize <= 800) {
-      setActiveMenu(false);
-    } else {
-      setActiveMenu(true);
-    }
-  }, [screenSize]);
-
   //Previous Work
   const classes = useStyles();
   const history = useHistory();
@@ -77,19 +55,19 @@ const Header = () => {
               className={classes.title}>
               FuzionX-Network
             </Typography>
-            <div className="menu-link">
-              <ul>
+            <nav className="menu-links">
+              <ul className="menus">
                 <li>
-                  <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+                  <Link to="/cryptocurrencies" style={{ textDecoration: "none" }}>Cryptocurrencies</Link>
                 </li>
                 <li>
-                  <Link to="/exchanges">Exchanges</Link>
+                  <Link to="/exchanges" style={{ textDecoration: "none" }}>Exchanges</Link>
                 </li>
                 <li>
-                  <Link to="/news">News</Link>
+                  <Link to="/news" style={{ textDecoration: "none" }}>News</Link>
                 </li>
               </ul>
-            </div>
+            </nav>
 
             <Select
               variant="outlined"
@@ -106,8 +84,9 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </ThemeProvider>
+    </ThemeProvider >
   );
 };
+
 
 export default Header;

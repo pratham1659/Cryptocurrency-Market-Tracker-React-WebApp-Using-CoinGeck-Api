@@ -30,6 +30,19 @@ a:hover {
   color: var(--pink) !important;
 }
 
+ul {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.menu-links ul {
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+}
 .app {
   display: flex;
   overflow: hidden;
